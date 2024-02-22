@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         reverseStringUsingRecursion();
+        System.out.println(reverseStringRecursiveApproach2("Education"));
     }
     private static void reverseStringUsingRecursion(){
         String input = "Education";
@@ -20,6 +21,13 @@ public class Main {
               reverseString(input,result,index);
           }
           return result;
+    }
+    // approach 2
+    private static  String reverseStringRecursiveApproach2(String input){
+        if (null == input || input.length()<=1){
+            return input;
+        }
+       return reverseStringRecursiveApproach2(input.substring(1))+input.charAt(0);
     }
 }
 
