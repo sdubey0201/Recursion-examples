@@ -1,10 +1,14 @@
 package com.recursion.examples;
 
+import java.util.Objects;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         reverseStringUsingRecursion();
         System.out.println(reverseStringRecursiveApproach2("Education"));
+        System.out.println("Using Approach 3");
+        printReverseStringUsingRecursion("Communication");
     }
     private static void reverseStringUsingRecursion(){
         String input = "Education";
@@ -28,6 +32,18 @@ public class Main {
             return input;
         }
        return reverseStringRecursiveApproach2(input.substring(1))+input.charAt(0);
+    }
+
+    // approach 3
+    private  static  void  printReverseStringUsingRecursion(String input){
+        if (Objects.isNull(input) || input.length()<=1){
+            System.out.print(input);
+        }else {
+            char c = input.charAt(input.length()-1);
+            System.out.print(c);
+            printReverseStringUsingRecursion(input.substring(0,input.length()-1));
+        }
+
     }
 }
 
