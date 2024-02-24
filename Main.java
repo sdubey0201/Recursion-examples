@@ -9,7 +9,7 @@ public class Main {
 //        System.out.println(reverseStringRecursiveApproach2("Education"));
 //        System.out.println("Using Approach 3");
 //        printReverseStringUsingRecursion("Communication");
-        printNumberSequenceUsingRecursion(5);
+        printNumberSequenceUsingRecursion(10);
 
     }
     private static void reverseStringUsingRecursion(){
@@ -49,13 +49,11 @@ public class Main {
     }
 
     private static void printNumberSequenceUsingRecursion(int N){
-        if (N==1){
-            System.out.print(" "+N);
-        }else {
-            System.out.print(N+" ");
+        if (N>=1){
             printNumberSequenceUsingRecursion(N-1);
-
+            System.out.print(" "+N);
         }
+        return;
 
     }
 }
