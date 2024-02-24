@@ -4,11 +4,13 @@ import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        reverseStringUsingRecursion();
-        System.out.println(reverseStringRecursiveApproach2("Education"));
-        System.out.println("Using Approach 3");
-        printReverseStringUsingRecursion("Communication");
+//        System.out.println("Hello world!");
+//        reverseStringUsingRecursion();
+//        System.out.println(reverseStringRecursiveApproach2("Education"));
+//        System.out.println("Using Approach 3");
+//        printReverseStringUsingRecursion("Communication");
+        printNumberSequenceUsingRecursion(5);
+
     }
     private static void reverseStringUsingRecursion(){
         String input = "Education";
@@ -45,5 +47,17 @@ public class Main {
         }
 
     }
+
+    private static void printNumberSequenceUsingRecursion(int N){
+        if (N==1){
+            System.out.print(" "+N);
+        }else {
+            System.out.print(N+" ");
+            printNumberSequenceUsingRecursion(N-1);
+
+        }
+
+    }
 }
+
 
