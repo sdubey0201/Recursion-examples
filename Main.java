@@ -9,7 +9,8 @@ public class Main {
 //        System.out.println(reverseStringRecursiveApproach2("Education"));
 //        System.out.println("Using Approach 3");
 //        printReverseStringUsingRecursion("Communication");
-        printNumberSequenceUsingRecursion(10);
+//        printNumberSequenceUsingRecursion(10);
+        printNumberSequenceUsingRecursionReverse(10);
 
     }
     private static void reverseStringUsingRecursion(){
@@ -54,6 +55,16 @@ public class Main {
             System.out.print(" "+N);
         }
         return;
+
+    }
+    private static void printNumberSequenceUsingRecursionReverse(int N){
+        if (N>1){
+            System.out.print(" "+N);
+            printNumberSequenceUsingRecursionReverse(N-1);
+        }else {
+            System.out.print(" "+N);
+        }
+
 
     }
 }
