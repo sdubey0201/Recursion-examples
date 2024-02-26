@@ -10,7 +10,11 @@ public class Main {
 //        System.out.println("Using Approach 3");
 //        printReverseStringUsingRecursion("Communication");
 //        printNumberSequenceUsingRecursion(10);
-        printNumberSequenceUsingRecursionReverse(10);
+//        printNumberSequenceUsingRecursionReverse(10);
+        int value [] ={1,2,3};
+        int index = value.length-1 ;
+        int sum = 0;
+        meanOfArrayUsingRecursion(value,index,sum);
 
     }
     private static void reverseStringUsingRecursion(){
@@ -65,6 +69,18 @@ public class Main {
             System.out.print(" "+N);
         }
 
+
+    }
+
+    private static void meanOfArrayUsingRecursion(int [] values,int index, int sum){
+
+           if (index <=0){
+               sum = sum+values[0];
+               System.out.println("mean is "+(sum/values.length));
+           }else {
+               sum = sum+values[index];
+               meanOfArrayUsingRecursion(values,index-1,sum);
+           }
 
     }
 }
