@@ -11,4 +11,11 @@ public class SumOfArrayElementsUsingRecursion {
         return a;
 
     }
+    public  static int sumOfArrayElementUsingTailRecursion(int [] element,int length,int sum){
+        if (length<=0){
+            return sum;
+        }
+        sum = sum+element[length-1]+sumOfArrayElementUsingTailRecursion(element,length-1,sum);
+        return sum;
+    }
 }
